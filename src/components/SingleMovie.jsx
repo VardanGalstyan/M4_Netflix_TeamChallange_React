@@ -16,7 +16,7 @@ export default class SingleMovie extends Component {
                     onClick={() => this.setState({ modalShow: true })}
 
                 >
-                    <Card.Img variant="top" style={{ height: '240px' }} src={this.props.Poster} className="card-img-top" />
+                    <Card.Img variant="top" style={{ height: '240px' }} src={this.props.Poster} />
                     <Card.Body className='p-1'>
                         <Card.Title></Card.Title>
                     </Card.Body>
