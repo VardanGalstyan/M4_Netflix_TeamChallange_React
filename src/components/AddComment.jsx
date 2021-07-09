@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Button, Form } from 'react-bootstrap'
 
-
 export default class AddComment extends Component {
 
 

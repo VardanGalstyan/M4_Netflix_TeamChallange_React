@@ -37,3 +37,10 @@
     transform: rotate(360deg);
   }
 }
+
+
+.carousel .card img {
+  object-fit: cover;
+  padding: 1px;
+}
+
