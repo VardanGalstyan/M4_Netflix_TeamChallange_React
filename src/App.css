@@ -41,6 +41,21 @@
 
 .carousel .card img {
   object-fit: cover;
-  padding: 1px;
+
 }
+
+.carousel .card {
+  border: 1px solid rgba(83, 81, 81, 0.459);
+  border-radius: 0px;
+}
+
+.carousel .active {
+  background-color: black;
+}
+
+
+
+
+
+
 

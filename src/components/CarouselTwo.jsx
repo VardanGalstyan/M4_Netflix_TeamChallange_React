@@ -7,7 +7,7 @@ export default class CarouselTwo extends Component {
         films: []
     }
 
-   
+
 
     componentDidMount = async () => {
         let response = await fetch("http://www.omdbapi.com/?s=batman&apikey=72db6b6a")
@@ -20,17 +20,21 @@ export default class CarouselTwo extends Component {
 
     render() {
         return (
-            
+
             <Container>
                 <Carousel>
                     <CarouselItem >
-                      <Row className="row-cols-sm-6 flex-nowrap">
-                        {
+                        <Row className="row-cols-sm-6 flex-nowrap">
+                            {
                                 this.state.films.map(film => <Col key={film.imdbID} className=" mb-4">
-                                   <SingleMovie poster={film.Poster}/> 
+                                    <SingleMovie
+                                        poster={film.Poster}
+                                        title={film.Title}
+                                        imdbid={film.imdbID}
+                                    />
                                 </Col>)
                             }
-                            </Row>
+                        </Row>
                     </CarouselItem>
                 </Carousel>
             </Container>
