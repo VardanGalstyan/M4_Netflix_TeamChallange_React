@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react'
 import { CarouselItem, Container, Row, Col, Carousel, Card } from 'react-bootstrap'
+import SingleMovie from './SingleMovie'
 
 export default class MainCarousel extends Component {
     state = {
@@ -25,12 +26,7 @@ export default class MainCarousel extends Component {
                       <Row className="row-cols-sm-6 row">
                         {
                                 this.state.films.map(film => <Col key={film.imdbID} className="col mb-4">
-                                    <Card><img
-                                        className="card-img-top"
-                                        src={film.Poster}
-                                        alt="First slide"
-                                        />
-                                    </Card>
+                                   <SingleMovie Poster={film.Poster}/> 
                                 </Col>)
                             }
                             </Row>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button, ListGroupItem } from 'react-bootstrap'
-import { RiDeleteBin6Line } from "react-icons/ri";
+// import { RiDeleteBin6Line } from "react-icons/ri";
 
 
 
@@ -35,7 +35,7 @@ export default function SingleComment(props) {
                     variant='danger' 
                     className='ml-1' 
                     onClick={() => deleteComment(props.comment._id)}
-                ><RiDeleteBin6Line/></Button>
+                >X</Button>
             </ListGroupItem>
 
         </div>
