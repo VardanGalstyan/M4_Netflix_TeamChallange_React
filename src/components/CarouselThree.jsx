@@ -1,9 +1,8 @@
-
 import React, { Component } from 'react'
 import { CarouselItem, Container, Row, Col, Carousel } from 'react-bootstrap'
 import SingleMovie from './SingleMovie'
 
-export default class MainCarousel extends Component {
+export default class CarouselThree extends Component {
     state = {
         films: []
     }
@@ -11,7 +10,7 @@ export default class MainCarousel extends Component {
    
 
     componentDidMount = async () => {
-        let response = await fetch("http://www.omdbapi.com/?s=thrones&apikey=72db6b6a")
+        let response = await fetch("http://www.omdbapi.com/?s=star&apikey=72db6b6a")
         let res = await response.json()
         console.log(res)
         this.setState({
@@ -41,5 +40,3 @@ export default class MainCarousel extends Component {
         )
     }
 }
-
-
