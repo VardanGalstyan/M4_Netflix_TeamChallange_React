@@ -16,19 +16,24 @@ export default class MainCarousel extends Component {
         console.log(res)
         this.setState({
             films: res.Search
+            
         })
     }
 
     render() {
         return (
-            
+
             <Container>
                 <Carousel>
                     <CarouselItem >
                       <Row className="row-cols-sm-6 flex-nowrap">
                         {
                                 this.state.films.map(film => <Col key={film.imdbID} className=" mb-4">
-                                   <SingleMovie Poster={film.Poster}/> 
+                                   <SingleMovie 
+                                        poster={film.Poster}
+                                        title = {film.Title}
+                                        imdbid = {film.imdbID}
+                                    /> 
                                 </Col>)
                             }
                             </Row>
@@ -41,5 +46,3 @@ export default class MainCarousel extends Component {
         )
     }
 }
-
-
