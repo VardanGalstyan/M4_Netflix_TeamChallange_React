@@ -9,7 +9,7 @@ export default class MainCarousel extends Component {
     }
 
     componentDidMount = async () => {
-        let response = await fetch("http://www.omdbapi.com/?s=starwars&apikey=72db6b6a")
+        let response = await fetch("http://www.omdbapi.com/?s=thrones&apikey=72db6b6a")
         let res = await response.json()
         console.log(res)
         this.setState({
