@@ -20,12 +20,27 @@ export default class MainCarousel extends Component {
 
     render() {
         return (
-            
+
             <Container>
                 <Carousel>
                     <CarouselItem>
                       <Row className="row-cols-sm-6 ">
                         {
                                 this.state.films.map(film => <Col key={film.imdbID} className=" mb-4">
-                                   <SingleMovie Poster={film.Poster}/> 
+                                   <SingleMovie 
+                                        poster={film.Poster}
+                                        title = {film.Title}
+                                        imdbid = {film.imdbID}
+                                    /> 
                                 </Col>)
+                            }
+                            </Row>
+                    </CarouselItem>
+                </Carousel>
+            </Container>
+
+
+
+        )
+    }
+}
