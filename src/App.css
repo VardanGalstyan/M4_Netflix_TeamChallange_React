@@ -2,6 +2,24 @@
   text-align: center;
 }
 
+/* Navbar and footer CSS section */
+.IconSize{
+  size: 2px !important;
+}
+a{
+  color:white !important;
+}
+li{
+  list-style: none !important;
+  color: whitesmoke;
+  padding-top: 12px;
+}
+h6{
+  color:whitesmoke !important;
+}
+/* Navbar and footer ends Here */
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
