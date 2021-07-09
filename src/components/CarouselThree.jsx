@@ -27,7 +27,7 @@ export default class CarouselThree extends Component {
                       <Row className="row-cols-sm-6 flex-nowrap">
                         {
                                 this.state.films.map(film => <Col key={film.imdbID} className=" mb-4">
-                                   <SingleMovie Poster={film.Poster}/> 
+                                   <SingleMovie poster={film.Poster}/> 
                                 </Col>)
                             }
                             </Row>
