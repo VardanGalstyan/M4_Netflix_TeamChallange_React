@@ -24,9 +24,11 @@ export default class MainCarousel extends Component {
         return (
 
             <Container>
+                <p className="text-white mt-4 mb-2 font-weight-bolder text-left">My Favourite</p>
                 <Carousel>
                     <CarouselItem >
                       <Row className="row-cols-sm-6 flex-nowrap">
+                          
                         {
                                 this.state.films.map(film => <Col key={film.imdbID} className=" mb-4">
                                    <SingleMovie 

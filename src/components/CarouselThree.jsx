@@ -22,6 +22,7 @@ export default class CarouselThree extends Component {
         return (
             
             <Container>
+                <p className="text-white mt-4 mb-2 font-weight-bolder text-left">Trending Now</p>
                 <Carousel>
                     <CarouselItem >
                       <Row className="row-cols-sm-6 flex-nowrap">
