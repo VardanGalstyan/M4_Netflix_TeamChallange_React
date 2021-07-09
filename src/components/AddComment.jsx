@@ -9,7 +9,7 @@ export default class AddComment extends Component {
         comment: {
             comment: '',
             rate: 1,
-            elementId: this.props.imdbID
+            elementId: this.props.imdbid
         }
     }
 

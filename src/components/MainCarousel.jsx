@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import { CarouselItem, Container, Row, Col, Carousel, Card } from 'react-bootstrap'
+import { CarouselItem, Container, Row, Col, Carousel } from 'react-bootstrap'
 import SingleMovie from './SingleMovie'
 
 export default class MainCarousel extends Component {
@@ -14,6 +14,7 @@ export default class MainCarousel extends Component {
         console.log(res)
         this.setState({
             films: res.Search
+            
         })
     }
 
@@ -28,14 +29,3 @@ export default class MainCarousel extends Component {
                                 this.state.films.map(film => <Col key={film.imdbID} className=" mb-4">
                                    <SingleMovie Poster={film.Poster}/> 
                                 </Col>)
-                            }
-                            </Row>
-                    </CarouselItem>
-                </Carousel>
-            </Container>
-
-
-
-        )
-    }
-}
