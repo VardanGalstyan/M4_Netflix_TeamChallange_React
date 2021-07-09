@@ -1,0 +1,23 @@
+import React from 'react'
+import { ListGroup } from 'react-bootstrap'
+import SingleComment from './SingleComment'
+
+export default function CommentList(props) {
+    return (
+        <>
+            <ListGroup variant="flush">
+                {
+                    props.comments.map(comment => (
+                        
+                        <SingleComment 
+                            key={comment._id} 
+                            comment={comment} 
+                            rate={comment.rate} 
+                        />
+
+                    ))
+                }
+            </ListGroup>
+        </>
+    )
+}

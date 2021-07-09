@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #141414;
 }
 
 /* Navbar and footer CSS section */
@@ -54,3 +55,25 @@ h6{
     transform: rotate(360deg);
   }
 }
+
+
+.carousel .card img {
+  object-fit: cover;
+
+}
+
+.carousel .card {
+  border: 1px solid rgba(83, 81, 81, 0.459);
+  border-radius: 0px;
+}
+
+.carousel .active {
+  background-color: black;
+}
+
+
+
+
+
+
+
