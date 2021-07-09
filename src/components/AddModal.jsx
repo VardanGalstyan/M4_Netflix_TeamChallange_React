@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Modal, Button } from 'react-bootstrap'
+import { Modal, Button, Row, Col } from 'react-bootstrap'
 import AddComment from './AddComment'
 import CommentList from './CommentList'
 
@@ -23,7 +23,7 @@ export default class AddModal extends Component {
                 let comments = await response.json()
                 this.setState({ comments: comments, isLoading: false })
 
-                
+
             } else {
                 console.log('error');
                 this.setState({ isLoading: false, isError: true })
@@ -35,13 +35,13 @@ export default class AddModal extends Component {
 
         }
     }
-    
-    
+
+
 
     render() {
         return (
             <Modal
-                
+
 
                 {...this.props}
                 size="lg"
@@ -54,15 +54,17 @@ export default class AddModal extends Component {
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-
-                    <p>
-                        Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-                        dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-                        consectetur ac, vestibulum at eros.
-                    </p>
-                    <img src={this.props.poster} alt="" style={{ width: '240px' }} />
-                    <AddComment imdbid={this.props.imdbid} />
-                    <CommentList className='mb-3' comments={this.state.comments} />
+                    <Row>
+                        <Col className='text-center mt-4'>
+                            <img src={this.props.poster} alt="" style={{ maxWidth: '350xp' }} />
+                        </Col>
+                        <Col>
+                            <AddComment imdbid={this.props.imdbid} />
+                        </Col>
+                    </Row>
+                    <Row className='d-inline'>
+                        <CommentList className='mb-3' style={{ width: '100%' }} comments={this.state.comments} />
+                    </Row>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button onClick={this.props.onHide}>Close</Button>
@@ -70,5 +72,5 @@ export default class AddModal extends Component {
             </Modal>
         )
     }
-    
+
 }
